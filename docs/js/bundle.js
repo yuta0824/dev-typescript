@@ -2,10 +2,10 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/css/output.css":
-/*!****************************!*\
-  !*** ./src/css/output.css ***!
-  \****************************/
+/***/ "./src/css/index.css":
+/*!***************************!*\
+  !*** ./src/css/index.css ***!
+  \***************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -60,7 +60,7 @@ var __webpack_exports__ = {};
   !*** ./src/js/index.ts ***!
   \*************************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _css_output_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css/output.css */ "./src/css/output.css");
+/* harmony import */ var _css_index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css/index.css */ "./src/css/index.css");
 
 console.log("test");
 
