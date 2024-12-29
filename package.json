@@ -8,7 +8,7 @@
     "start:dev": "npx webpack serve --mode development",
     "build:prod": "npx webpack --mode production",
     "build:dev": "npx webpack --mode development",
-    "build:tailwind": "npx tailwindcss -i ./src/css/style.css -o ./docs/css/style.css --watch"
+    "build:tailwind": "npx tailwindcss -i ./src/css/input.css -o ./src/css/output.css --watch"
   },
   "devDependencies": {
     "@eslint/js": "9.15.0",
