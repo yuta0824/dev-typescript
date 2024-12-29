@@ -12,8 +12,9 @@ module.exports = {
 
   devServer: {
     static: {
-      directory: " ./docs/",
+      directory: "./docs/",
     },
+    watchFiles: ["src/**/*"],
   },
 
   module: {
