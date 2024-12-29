@@ -62,7 +62,8 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _css_output_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css/output.css */ "./src/css/output.css");
 
-console.log("test");
+let greeting = "Hello, World!";
+console.log(greeting);
 
 })();
 

@@ -1,2 +1,4 @@
 import "../css/output.css";
-console.log("test");
+
+let greeting: string = "Hello, World!";
+console.log(greeting);
