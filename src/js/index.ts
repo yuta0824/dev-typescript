@@ -1,2 +1,2 @@
-import "../css/index.css";
+import "../css/output.css";
 console.log("test");
