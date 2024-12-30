@@ -14,8 +14,6 @@ buttonRegister.addEventListener("click", () => {
   // TODO一覧を表示する
   removeTodoListElement();
   appendTodoList(todoList, filterWord, deleteTodo);
-
-  console.log("登録 todoList", todoList);
 });
 
 // 絞り込み入力時の処理
@@ -24,8 +22,6 @@ filterInput.addEventListener("input", () => {
   filterWord = filterInput.value;
   removeTodoListElement();
   appendTodoList(todoList, filterWord, deleteTodo);
-
-  console.log("絞り込み todoList", todoList);
 });
 
 /**
@@ -37,6 +33,4 @@ const deleteTodo = (id: number) => {
   todoList = todoList.filter((todo) => todo.id !== id);
   removeTodoListElement();
   appendTodoList(todoList, filterWord, deleteTodo);
-
-  console.log("削除 todoList", todoList);
 };
