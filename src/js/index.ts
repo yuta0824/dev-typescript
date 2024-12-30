@@ -1,4 +1,15 @@
 import "../css/output.css";
+import { appendTodoList, getNewTodo, Todo } from "./todo";
+import { getElementById } from "./utils/dom";
 
-let greeting: string = "Hello, World!";
-console.log(greeting);
+let todoList: Todo[] = [];
+
+const buttonRegister = getElementById("button-register")!;
+
+buttonRegister.addEventListener("click", () => {
+  // 新しいTODOからDOMを取得する
+  todoList.push(getNewTodo());
+
+  // TODO一覧を表示する
+  appendTodoList(todoList);
+});

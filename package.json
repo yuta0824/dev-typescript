@@ -1,7 +1,7 @@
 {
-  "name": "dev-typescript",
+  "name": "dev-typescript-todo",
   "version": "1.0.0",
-  "description": "dev-typescript",
+  "description": "dev-typescript-todo",
   "scripts": {
     "format": "npx prettier . --write",
     "lint:js": "npx eslint \"**/*.js\"",
