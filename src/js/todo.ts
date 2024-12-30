@@ -24,26 +24,32 @@ export const getNewTodo = (): Todo => ({
 /**
  * DOMにTODO一覧を表示する
  */
-export const appendTodoList = (todoList: Todo[], deleteTodo: (id: number) => void) => {
-  todoList.forEach((todo) => {
-    const nameTd = createElement("td", todo.name, "border border-gray-400 px-2 py-2");
-    const personTd = createElement("td", todo.person, "border border-gray-400 px-2 py-2");
-    const deadlineTd = createElement("td", todo.deadline, "border border-gray-400 px-2 py-2");
+export const appendTodoList = (
+  _todoList: Todo[],
+  _filterWord: string,
+  deleteTodo: (id: number) => void
+) => {
+  _todoList
+    .filter((todo) => todo.name.includes(_filterWord) || todo.person.includes(_filterWord))
+    .forEach((todo) => {
+      const nameTd = createElement("td", todo.name, "border border-gray-400 px-2 py-2");
+      const personTd = createElement("td", todo.person, "border border-gray-400 px-2 py-2");
+      const deadlineTd = createElement("td", todo.deadline, "border border-gray-400 px-2 py-2");
 
-    // 削除ボタンを追加
-    const deleteButton = createElement("button", "削除", "border bg-red p-1");
-    deleteButton.addEventListener("click", () => deleteTodo(todo.id));
-    const deleteButtonTd = createElement("td", undefined, "border border-gray-400 px-2 py-2");
-    deleteButtonTd.appendChild(deleteButton);
+      // 削除ボタンを追加
+      const deleteButton = createElement("button", "削除", "border bg-red p-1");
+      deleteButton.addEventListener("click", () => deleteTodo(todo.id));
+      const deleteButtonTd = createElement("td", undefined, "border border-gray-400 px-2 py-2");
+      deleteButtonTd.appendChild(deleteButton);
 
-    const tr = createElement("tr");
-    tr.appendChild(nameTd);
-    tr.appendChild(personTd);
-    tr.appendChild(deadlineTd);
-    tr.appendChild(deleteButtonTd);
-    const tbody = getInputElementById("todo-list");
-    tbody.appendChild(tr);
-  });
+      const tr = createElement("tr");
+      tr.appendChild(nameTd);
+      tr.appendChild(personTd);
+      tr.appendChild(deadlineTd);
+      tr.appendChild(deleteButtonTd);
+      const tbody = getInputElementById("todo-list");
+      tbody.appendChild(tr);
+    });
 };
 
 /**
