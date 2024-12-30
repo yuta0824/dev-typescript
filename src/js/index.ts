@@ -12,5 +12,16 @@ buttonRegister.addEventListener("click", () => {
 
   // TODO一覧を表示する
   removeTodoListElement();
-  appendTodoList(todoList);
+  appendTodoList(todoList, deleteTodo);
 });
+
+/**
+ * TODOを削除する
+ * @param id
+ * @returns void
+ */
+const deleteTodo = (id: number) => {
+  todoList = todoList.filter((todo) => todo.id !== id);
+  removeTodoListElement();
+  appendTodoList(todoList, deleteTodo);
+};
