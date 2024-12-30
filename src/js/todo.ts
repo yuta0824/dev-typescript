@@ -24,16 +24,8 @@ export const getNewTodo = (): Todo => ({
  */
 export const appendTodoList = (todoList: Todo[]): void => {
   todoList.forEach((todo) => {
-    const nameTd = createElement(
-      "td",
-      todo.name,
-      "w-[30%] border border-gray-400 px-2 py-2"
-    );
-    const personTd = createElement(
-      "td",
-      todo.person,
-      "w-[30%] border border-gray-400 px-2 py-2"
-    );
+    const nameTd = createElement("td", todo.name, "w-[30%] border border-gray-400 px-2 py-2");
+    const personTd = createElement("td", todo.person, "w-[30%] border border-gray-400 px-2 py-2");
     const deadlineTd = createElement(
       "td",
       todo.deadline,
@@ -46,4 +38,16 @@ export const appendTodoList = (todoList: Todo[]): void => {
     const tbody = getInputElementById("todo-list");
     tbody.appendChild(tr);
   });
+};
+
+/**
+ * DOMからTODO一覧を削除する
+ *
+ *  @returns void
+ */
+export const removeTodoListElement = (): void => {
+  const tbody = getInputElementById("todo-list");
+  while (tbody.firstChild) {
+    tbody.firstChild.remove();
+  }
 };
